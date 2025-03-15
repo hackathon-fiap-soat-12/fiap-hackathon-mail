@@ -12,15 +12,12 @@ class MailDTOTest {
 	@Test
 	@DisplayName("Should return MailDTO attributes as the object was created by the constructor")
 	void shouldReturnMailDTOAttributesAsTheObjectCreatedByTheConstructor() {
-		// Arrange
 		var email = "test@example.com";
 		var status = "FAILED";
 		var videoName = "video.mp4";
 
-		// Act
 		var mailDTO = new MailDTO(email, MailEnum.valueOf(status.toUpperCase()), videoName);
 
-		// Assert
 		assertEquals(email, mailDTO.email());
 		assertEquals(status, mailDTO.status().name());
 		assertEquals(videoName, mailDTO.videoName());
@@ -30,16 +27,13 @@ class MailDTOTest {
 	@Test
 	@DisplayName("Should return MailDTO attributes as the object was created by the constructor passing the MailPushDTO")
 	void shouldReturnMailDTOAttributesAsTheObjectCreatedByTheConstructorPassingTheMailPushDTO() {
-		// Arrange
 		var email = "test@example.com";
 		var status = "PROCESSED";
 		var videoName = "video.mp4";
 		var mailPushDTO = new MailPushDTO(email, status, videoName);
 
-		// Act
 		var mailDTO = new MailDTO(mailPushDTO);
 
-		// Assert
 		assertEquals(email, mailDTO.email());
 		assertEquals(status, mailDTO.status().name());
 		assertEquals(videoName, mailDTO.videoName());

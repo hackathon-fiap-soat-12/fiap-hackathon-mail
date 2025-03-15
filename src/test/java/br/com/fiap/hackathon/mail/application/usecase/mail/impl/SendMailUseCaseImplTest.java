@@ -58,13 +58,10 @@ class SendMailUseCaseImplTest {
 	@Test
 	@DisplayName("Should Send Mail Type Failed")
 	void shouldSendMailTypeFailed() {
-		// Arrange
 		var mailDTO = new MailDTO("test@example.com", MailEnum.FAILED, "video.mp4");
 
-		// Act
 		assertDoesNotThrow(() -> sendMailUseCase.send(mailDTO));
 
-		// Assert
 		assertFalse(mailDTO.status().isSuccess());
 		verify(mailSender).send(mimeMessage);
 	}
