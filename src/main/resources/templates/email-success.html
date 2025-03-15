@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ Processamento Concluído</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .header {
+            background-color: #228B22; /* Verde */
+            color: white;
+            padding: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .divider {
+            border-top: 2px solid #ddd;
+            margin: 20px 0;
+        }
+        .footer {
+            background-color: #228B22;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 0 0 10px 10px;
+        }
+        .highlight {
+            color: #228B22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        ✅ Processamento Concluído
+    </div>
+
+    <div class="content">
+        <p>O vídeo <span class="highlight" th:text="${videoName}">xpto</span> foi processado com sucesso.</p>
+        <div class="divider"></div>
+        <p><strong>FIAP Hackathon SOAT 12</strong></p>
+    </div>
+
+    <div class="footer">
+        Este é um e-mail automático. Por favor, não responda.
+    </div>
+</div>
+</body>
+</html>
