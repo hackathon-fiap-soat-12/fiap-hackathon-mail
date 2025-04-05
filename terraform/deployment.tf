@@ -134,7 +134,7 @@ resource "kubernetes_deployment" "mail_deployment" {
 
           env {
             name = "OTEL_EXPORTER_OTLP_ENDPOINT"
-            value = var.alloy_otpl_endpoint
+            value = var.otlp_endpoint
           }
 
           env {
