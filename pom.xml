@@ -14,19 +14,6 @@
 	<name>fiap-hackathon-mail</name>
 	<packaging>jar</packaging>
 	<description>FIAP SOAT Hackathon - Mail</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
 	<properties>
 		<java.version>21</java.version>
 		<sonar.coverage.exclusions>**/MailApplication.java</sonar.coverage.exclusions>

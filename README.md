@@ -75,10 +75,6 @@ Caso deseje subir a Mail, basta seguir os seguintes passos:
 ### Scan do Sonar
 ![Sonar_1](./assets/sonar_mail_1.png)
 ![Sonar_1](./assets/sonar_mail_2.png)
-![Sonar_1](./assets/sonar_mail_3.png)
-
-### JaCoCo
-![JaCoCo](./coverage/fiap-hackathon-mail.html)
 
 ## 🎲 Seeds
 
