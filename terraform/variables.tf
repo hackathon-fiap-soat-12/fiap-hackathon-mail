@@ -42,3 +42,25 @@ variable "otlp_endpoint" {
   default     = "http://alloy.monitoring:4317"
   description = "OTLP exporter endpoint"
 }
+
+variable "smtp_host" {
+  type        = string
+  default     = "smtp.gmail.com"
+  description = "SMTP Host"
+}
+
+variable "mail_port" {
+  type        = number
+  default     = 587
+  description = "Mail port"
+}
+
+variable "mail_username" {
+  type        = string
+  description = "Mail username"
+}
+
+variable "mail_password" {
+  type        = string
+  description = "Mail password"
+}

@@ -74,22 +74,32 @@ resource "kubernetes_deployment" "mail_deployment" {
 
           env {
             name = "MAIL_HOST"
-            value = "smtp.gmail.com"
+            value = var.smtp_host
           }
 
           env {
             name = "MAIL_PORT"
-            value = "587"
+            value = var.mail_port
           }
 
           env {
             name = "MAIL_USERNAME"
-            value = "soatfiap@gmail.com"
+            value_from {
+              secret_key_ref {
+                name = "fiap-hackathon-mail-secret"
+                key  = "mail_username"
+              }
+            }
           }
 
           env {
-            name = "MAIL_PASSWORD"
-            value = ""
+            name = "MAIL_password"
+            value_from {
+              secret_key_ref {
+                name = "fiap-hackathon-mail-secret"
+                key  = "mail_password"
+              }
+            }
           }
 
           env {
