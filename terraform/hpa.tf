@@ -27,5 +27,5 @@ resource "kubernetes_horizontal_pod_autoscaler_v2" "mail_hpa" {
     }
   }
 
-  depends_on = [kubernetes_service.mail_service]
+  depends_on = [kubernetes_deployment.mail_deployment]
 }
