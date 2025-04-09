@@ -11,6 +11,13 @@ RUN java -Djarmode=layertools -jar app.jar extract
 FROM eclipse-temurin:21.0.4_7-jre-alpine
 WORKDIR /opt/app
 RUN addgroup --system appuser && adduser -S -s /usr/sbin/nologin -G appuser appuser
+
+ENV OTEL_AGENT_VERSION=2.14.0
+
+RUN apk add --no-cache wget && \
+    wget -O opentelemetry-javaagent.jar https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v${OTEL_AGENT_VERSION}/opentelemetry-javaagent.jar && \
+    apk del wget
+
 COPY --from=layers /layer/dependencies/ ./
 COPY --from=layers /layer/spring-boot-loader/ ./
 COPY --from=layers /layer/snapshot-dependencies/ ./
@@ -20,5 +27,4 @@ RUN chown -R appuser:appuser /opt/app
 USER appuser
 
 EXPOSE 8100
-
-ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
+ENTRYPOINT ["java", "-javaagent:/opt/app/opentelemetry-javaagent.jar", "-cp", ".", "org.springframework.boot.loader.launch.JarLauncher"]
