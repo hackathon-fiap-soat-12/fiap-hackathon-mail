@@ -58,8 +58,8 @@ resource "kubernetes_deployment" "mail_deployment" {
             }
             initial_delay_seconds = 60
             period_seconds        = 10
-            timeout_seconds       = 10
-            failure_threshold     = 5
+            timeout_seconds       = 5
+            failure_threshold     = 3
           }
 
           env {
