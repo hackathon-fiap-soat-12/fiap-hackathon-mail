@@ -58,8 +58,8 @@ resource "kubernetes_deployment" "mail_deployment" {
             }
             initial_delay_seconds = 60
             period_seconds        = 10
-            timeout_seconds       = 3
-            failure_threshold     = 1
+            timeout_seconds       = 10
+            failure_threshold     = 5
           }
 
           env {
@@ -93,7 +93,7 @@ resource "kubernetes_deployment" "mail_deployment" {
           }
 
           env {
-            name = "MAIL_password"
+            name = "MAIL_PASSWORD"
             value_from {
               secret_key_ref {
                 name = "fiap-hackathon-mail-secret"
@@ -169,7 +169,7 @@ resource "kubernetes_deployment" "mail_deployment" {
 
           env {
             name = "OTEL_JAVAAGENT_DEBUG"
-            value = "true"
+            value = "false"
           }
 
           env {
