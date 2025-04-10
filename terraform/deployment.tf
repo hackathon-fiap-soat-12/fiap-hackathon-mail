@@ -69,7 +69,7 @@ resource "kubernetes_deployment" "mail_deployment" {
 
           env {
             name  = "SQS_QUEUE_MAIL_PUSH_CONSUMER"
-            value = "mail-push-queue"
+            value = "notification-push-queue"
           }
 
           env {
