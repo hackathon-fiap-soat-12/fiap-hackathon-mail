@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MailPushConsumer {
 
-	private static final Logger log = LoggerFactory.getLogger(MailPushConsumer.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(MailPushConsumer.class);
 
 	private final SendMailUseCase sendMailUseCase;
 
@@ -27,7 +27,7 @@ public class MailPushConsumer {
 
 	@SqsListener("${sqs.queue.mail.push.consumer}")
 	public void receiveMessage(String message) throws JsonProcessingException, MessagingException {
-		log.info("Received Message: {}", message);
+		LOGGER.info("Received Message: {}", message);
 		sendMailUseCase.send(new MailDTO(objectMapper.readValue(message, MailPushDTO.class)));
 	}
 

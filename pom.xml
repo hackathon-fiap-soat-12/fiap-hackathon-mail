@@ -110,20 +110,31 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>io.spring.javaformat</groupId>
-				<artifactId>spring-javaformat-maven-plugin</artifactId>
-				<version>0.0.39</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.5.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.puppycrawl.tools</groupId>
+						<artifactId>checkstyle</artifactId>
+						<version>10.18.0</version>
+					</dependency>
+				</dependencies>
 				<executions>
 					<execution>
+						<id>validate</id>
 						<phase>validate</phase>
-						<configuration>
-							<skip>${disable.checks}</skip>
-						</configuration>
 						<goals>
-							<goal>validate</goal>
+							<goal>check</goal>
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<logViolationsToConsole>true</logViolationsToConsole>
+					<configLocation>../fiap-hackathon-mail/checkstyle/checkstyle.xml</configLocation>
+					<consoleOutput>true</consoleOutput>
+					<sourceDirectories>${basedir}/src/main/java</sourceDirectories>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>

@@ -19,7 +19,7 @@ import java.util.Map;
 @Transactional
 public class SendMailUseCaseImpl implements SendMailUseCase {
 
-	private static final Logger log = LoggerFactory.getLogger(SendMailUseCaseImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SendMailUseCaseImpl.class);
 
 	private JavaMailSender mailSender;
 
@@ -38,7 +38,7 @@ public class SendMailUseCaseImpl implements SendMailUseCase {
 		helperMail(mensagem, input, template);
 
 		mailSender.send(mensagem);
-		log.info("E-mail enviado com sucesso para {}", input.email());
+		LOGGER.info("E-mail enviado com sucesso para {}", input.email());
 	}
 
 	private String templateMail(MailDTO input) {
