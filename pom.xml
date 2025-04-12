@@ -131,7 +131,7 @@
 				</executions>
 				<configuration>
 					<logViolationsToConsole>true</logViolationsToConsole>
-					<configLocation>../fiap-hackathon-mail/checkstyle/checkstyle.xml</configLocation>
+					<configLocation>checkstyle/checkstyle.xml</configLocation>
 					<consoleOutput>true</consoleOutput>
 					<sourceDirectories>${basedir}/src/main/java</sourceDirectories>
 				</configuration>
