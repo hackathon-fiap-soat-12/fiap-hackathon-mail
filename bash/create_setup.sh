@@ -5,7 +5,7 @@ ENDPOINT="http://localhost:4566"
 
 # Define as filas a serem criadas
 QUEUES=(
-  "mail-push-queue"
+  "notification-push-queue"
 )
 
 # Loop para criar as filas
