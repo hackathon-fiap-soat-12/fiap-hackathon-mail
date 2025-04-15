@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hackathon - Mail
+# FIAP Hackathon - Mail
 
 ![GitHub Release Date](https://img.shields.io/badge/Release%20Date-Fevereiro%202025-yellowgreen)
 ![](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellowgreen)
@@ -9,6 +9,7 @@
 </div>
 
 ## 💻 Descrição
+Este repositório é responsável enviar o e-mail para o usuario sobre o fim do processamento do video.
 
 ## 🛠 Tecnologias Utilizadas
 
@@ -26,8 +27,6 @@
 O projeto adota a **Clean Architecture**, garantindo flexibilidade, testabilidade e manutenção escalável.
 
 ## ⚙️ Configuração
-
-### Pré-requisitos
 
 ### Desenvolvimento
 
@@ -54,18 +53,13 @@ docker compose up
 Caso deseje subir a Mail, basta seguir os seguintes passos:
 
 1. Certificar que o Terraform esteja instalado executando o comando `terraform --version`;
-   ![terraform-version](./assets/terraform-version.png)
-
 2. Certificar que o `aws cli` está instalado e configurado com as credenciais da sua conta AWS;
-   ![aws-cli-version](./assets/aws-cli-version.png)
-
 3. Acessar a pasta `terraform` que contém os arquivos que irão criar o Mail;
 4. Inicializar o Terraform no projeto `terraform init`;
 5. Verificar que o script do Terraform é valido rodando o comando `terraform validate`;
 6. Executar o comando `terraform plan` para executar o planejamento da execução/implementação;
 7. Executar o comando `terraform apply` para criar o Mail;
 8. Após a execução do Terraform finalizar, verificar se o Mail subiu corretamente na AWS;
-   ![lambda-auth-aws-image]()
 
 ## ✅ Cobertura de Testes
 
