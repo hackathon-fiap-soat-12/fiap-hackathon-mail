@@ -3,7 +3,7 @@
 # FIAP Hackathon - Mail
 
 ![GitHub Release Date](https://img.shields.io/badge/Release%20Date-Abril%202025-yellowgreen)
-![](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellowgreen)
+![](https://img.shields.io/badge/Status-Desenvolvido-brightgreen)
 <br>
 ![](https://img.shields.io/badge/Version-%20v1.0.0-brightgreen)
 </div>
@@ -16,11 +16,15 @@ Este repositório é responsável enviar o e-mail para o usuario sobre o fim do 
 ![Java](https://img.shields.io/badge/java_21-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring_3-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white)
 ![Maven](https://img.shields.io/badge/Apache%20Maven-C71A36.svg?style=for-the-badge&logo=Apache-Maven&logoColor=white)
+![JUnit5](https://img.shields.io/badge/JUnit5-25A162.svg?style=for-the-badge&logo=JUnit5&logoColor=white)
+![Mockito](https://img.shields.io/badge/Mockito-53AC56.svg?style=for-the-badge&logo=Minetest&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=white)
-![Sonnar](https://img.shields.io/badge/Sonar-FD3456.svg?style=for-the-badge&logo=Sonar&logoColor=white)
+
+![AWS SQS](https://img.shields.io/badge/Amazon%20SQS-FF4F8B.svg?style=for-the-badge&logo=Amazon-SQS&logoColor=white)
+![Sonar](https://img.shields.io/badge/Sonar-FD3456.svg?style=for-the-badge&logo=Sonar&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000.svg?style=for-the-badge&logo=OpenTelemetry&logoColor=white)
 
 ## 💫 Arquitetura
 
@@ -69,6 +73,9 @@ Caso deseje subir a Mail, basta seguir os seguintes passos:
 ### Scan do Sonar
 ![Sonar_1](./assets/sonar_mail_1.png)
 ![Sonar_1](./assets/sonar_mail_2.png)
+
+### Verificação de vulnerabilidades com Check Dependency OWASP
+![Check_Dependency](./assets/check_dependency.png)
 
 ## 🎲 Seeds
 
